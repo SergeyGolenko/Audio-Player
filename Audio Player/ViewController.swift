@@ -10,6 +10,21 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    
+    @IBAction func stop(_ sender: UIButton) {
+        player.pause()
+    }
+    
+    @IBAction func play(_ sender: UIButton) {
+        player.play()
+    }
+    
+    @IBOutlet weak var volumeOutlet: UISlider!
+    @IBAction func volume(_ sender: UISlider) {
+        player.volume = volumeOutlet.value
+    }
+    
+    
     var player = AVAudioPlayer()
 
     override func viewDidLoad() {

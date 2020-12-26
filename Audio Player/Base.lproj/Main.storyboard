@@ -26,6 +26,9 @@
                                     <constraint firstAttribute="width" constant="50" id="U1K-tH-uKA"/>
                                 </constraints>
                                 <state key="normal" image="play" catalog="system"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L1K-of-c1q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="to0-Ht-E4q">
                                 <rect key="frame" x="50" y="124" width="50" height="30"/>
@@ -36,12 +39,18 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="xUv-mp-nwb"/>
                                 </constraints>
                                 <state key="normal" image="stop" catalog="system"/>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zpo-oc-lQl"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="u3d-Vw-GFO">
                                 <rect key="frame" x="250" y="124" width="161" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="cqX-EX-SBi"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="volume:" destination="BYZ-38-t0r" eventType="valueChanged" id="itm-2j-JxJ"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -60,6 +69,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u3d-Vw-GFO" secondAttribute="trailing" constant="5" id="xFi-u2-4A3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="volumeOutlet" destination="u3d-Vw-GFO" id="4R3-25-77c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,7 +79,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="izza" width="908" height="908"/>
+        <image name="izza" width="454" height="454"/>
         <image name="play" catalog="system" width="120" height="128"/>
         <image name="stop" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
